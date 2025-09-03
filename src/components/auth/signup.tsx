@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Input from '../common/Input'
 import Button from '../common/Button'
-import { createUserWithEmailAndPassword, auth, updateProfile, collection, db, addDoc, getIdToken } from '../../../config'
+import { createUserWithEmailAndPassword, auth, updateProfile, collection, db, addDoc } from '../../../config'
 
 export default function SignupComponent() {
     const [userinput, setUserInput] = useState({

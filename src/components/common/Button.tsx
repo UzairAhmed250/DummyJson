@@ -1,5 +1,4 @@
 import { LoadingOutlined } from '@ant-design/icons';
-import React from 'react'
 
 interface ButtonProps{
     className?: string;

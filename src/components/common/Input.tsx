@@ -23,7 +23,6 @@ export default function Input({
     placeholder,
     required,
     error,
-    className,
     id
 }: InputProps) {
   return (

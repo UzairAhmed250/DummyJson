@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface Recipe {
   id: number;
@@ -45,6 +45,8 @@ export default function ReciepesComponent() {
 
   if(loader) return <div className="flex justify-center items-center h-[100vh]"><LoadingOutlined /></div>
 
+  if(error) return <div className="flex justify-center items-center h-[100vh]"> `Site getting chashed: ${error}`</div>
+  
   return (
     <div>
       <div className="min-h-screen bg-gray-100 p-6">
