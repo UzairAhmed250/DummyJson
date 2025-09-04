@@ -1,4 +1,3 @@
-import { ResponseModality } from "firebase/ai"
 
 export default function ProductDetailComponent() {
 
