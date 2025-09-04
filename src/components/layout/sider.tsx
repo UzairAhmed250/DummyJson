@@ -13,13 +13,10 @@ const items: MenuItem[] = [
             { key: '1', label: 'Products' },
             { key: '2', label: 'Recipes' },
         ], 
-    },
-    {
-        key: "g2",
-        label: <div><p className='flex justify-center items-center rounded-[50%] border w-[50px] '>UN</p></div>
     }
-    
 ];
+
+
 
 const Sider: React.FC = () => {
    const navigate = useNavigate()
@@ -42,7 +39,7 @@ const Sider: React.FC = () => {
       className='h-[100vh]'
       style={{ width: 256 }}
       defaultSelectedKeys={['1']}
-      defaultOpenKeys={['sub1']}
+      defaultOpenKeys={['g1']}
       mode="inline"
       items={items}
     />

@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           if (currentuser) {
             setUser(currentuser);
             setIsAuthenticated(true);
-            console.log("Logged in:", currentuser);
           } else {
             setIsAuthenticated(false);
             setUser(null);

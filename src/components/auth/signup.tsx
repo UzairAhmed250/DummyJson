@@ -121,7 +121,7 @@ export default function SignupComponent() {
                     />
                 </form>
                 <div className="signup-footer">
-                    <p>Already have an account? <a href="/login">Sign In</a></p>
+                    <p>Already have an account? <a href="/">Sign In</a></p>
                 </div>
             </div>
         </div>

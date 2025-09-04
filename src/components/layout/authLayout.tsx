@@ -2,6 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 import { useAuth } from '../../../context/use-context'
 import { LoadingOutlined } from '@ant-design/icons';
 import Sider from './sider';
+import Header from './header';
 
 export default function AuthLayout() {
     const { isAuthenticated, loader  } = useAuth();
@@ -12,12 +13,13 @@ export default function AuthLayout() {
         </div>
     }
     
-    if (!isAuthenticated) return <Navigate to="/signup" replace />
+    if (!isAuthenticated) return <Navigate to="/" replace />
     
     return (
         <div className='flex h-screen'>
             <Sider />
-            <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+            <div className="flex-1 overflow-y-auto bg-gray-50">
+                <Header />
                 <Outlet />
             </div>
         </div>
