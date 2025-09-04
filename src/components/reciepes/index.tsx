@@ -1,5 +1,6 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface Recipe {
   id: number;
@@ -25,6 +26,8 @@ export default function ReciepesComponent() {
   const [loader, setLoader] = useState(true);
   const [error, setError] = useState("");
 
+  const navigate = useNavigate()
+
   const getReciepes = async () => {
     try {
       const response = await fetch("https://dummyjson.com/recipes");
@@ -43,6 +46,10 @@ export default function ReciepesComponent() {
     getReciepes();
   }, []);
 
+  const getRecipeById = (id:number) => {
+    navigate(`/products/RecipeDetails/${id}`)
+  }
+
   if(loader) return <div className="flex justify-center items-center h-[100vh]"><LoadingOutlined /></div>
 
   if(error) return <div className="flex justify-center items-center h-[100vh]"> `Site getting chashed: ${error}`</div>
@@ -59,6 +66,7 @@ export default function ReciepesComponent() {
               <div
                 key={item.id}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                onClick={() => getRecipeById(item.id)}
               >
                 <div className="h-48 overflow-hidden">
                   <img
