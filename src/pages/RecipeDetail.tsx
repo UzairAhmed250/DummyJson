@@ -1,4 +1,4 @@
-import { CheckCircleOutlined, ClockCircleOutlined, ExperimentOutlined, FireOutlined, LoadingOutlined, RetweetOutlined, StarFilled, TeamOutlined, ThunderboltOutlined } from "@ant-design/icons";
+import { CheckCircleOutlined, ClockCircleOutlined, ExperimentOutlined, FireOutlined, LoadingOutlined, StarFilled, TeamOutlined, ThunderboltOutlined } from "@ant-design/icons";
 import { Rate } from "antd";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
